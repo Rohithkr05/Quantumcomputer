@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuantumByte | Quantum Computing</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#020617;
+    color:#e5e7eb;
+    font-family:'Segoe UI', sans-serif;
+}
+.navbar{
+    background:#020617;
+    box-shadow:0 0 12px rgba(34,211,238,0.3);
+}
+.section{
+    display:none;
+    min-height:100vh;
+    padding:140px 0;
+}
+.section.active{
+    display:block;
+}
+.hero h1{
+    color:#22d3ee;
+}
+
+/* ===== CARDS (NO GLOW) ===== */
+.card{
+    background:linear-gradient(145deg,#111827,#020617);
+    border:1px solid rgba(34,211,238,0.25);
+    border-radius:20px;
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
+}
+.card h5{
+    color:#22d3ee;
+}
+.card p, .card li{
+    color:#cbd5f5;
+}
+
+/* ===== BUTTON GLOW ONLY ===== */
+.btn{
+    position:relative;
+    transition:all 0.35s ease;
+}
+.btn:hover{
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:
+        0 0 15px rgba(34,211,238,0.6),
+        0 0 30px rgba(34,211,238,0.6),
+        0 0 45px rgba(34,211,238,0.6);
+}
+.btn::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    box-shadow:0 0 25px rgba(34,211,238,0.6);
+    opacity:0;
+    transition:0.35s;
+    z-index:-1;
+}
+.btn:hover::after{
+    opacity:1;
+}
+
+/* ===== FUTURE IMAGES ===== */
+.future-img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand text-info fw-bold" onclick="showPage('home')">QuantumByte</a>
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" onclick="showPage('home')">Home</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showPage('concepts')">Concepts</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showPage('applications')">Applications</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showPage('future')">Future</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showPage('feedback')">Feedback</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section active">
+<div class="container text-center">
+<h1 class="display-4 fw-bold">Quantum Computing Revolution</h1>
+<p class="lead mt-4">
+Quantum computing uses quantum mechanics to perform calculations beyond classical limits.
+</p>
+
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837"
+     class="img-fluid rounded mt-4">
+
+<p class="mt-4">
+It will transform cryptography, healthcare, AI, climate science, and space research.
+</p>
+
+<button class="btn btn-outline-info btn-lg mt-4" onclick="showPage('concepts')">
+Next Page →
+</button>
+</div>
+</section>
+
+<!-- CONCEPTS -->
+<section id="concepts" class="section">
+<div class="container">
+<h2 class="text-center text-info mb-5">Core Concepts</h2>
+
+<div class="row g-4">
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Qubits</h5><p>Quantum bits with multiple states.</p></div></div>
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Superposition</h5><p>Parallel computation.</p></div></div>
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Entanglement</h5><p>Instant correlation.</p></div></div>
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Interference</h5><p>Amplifies correct outcomes.</p></div></div>
+
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Quantum Gates</h5><p>Control qubit behavior.</p></div></div>
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Quantum Circuits</h5><p>Algorithm execution.</p></div></div>
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Decoherence</h5><p>Loss of quantum state.</p></div></div>
+<div class="col-md-3"><div class="card p-4 h-100"><h5>Error Correction</h5><p>Reduces noise.</p></div></div>
+</div>
+
+<div class="text-center mt-5">
+<button class="btn btn-outline-info btn-lg" onclick="showPage('applications')">
+Next Page →
+</button>
+</div>
+</div>
+</section>
+
+<!-- APPLICATIONS -->
+<section id="applications" class="section">
+<div class="container">
+<h2 class="text-center text-info mb-5">Applications</h2>
+
+<div class="row g-4">
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Cryptography</h5><p>Quantum-secure encryption.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Healthcare</h5><p>Drug discovery.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Artificial Intelligence</h5><p>Faster learning models.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Finance</h5><p>Risk optimization.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Climate Science</h5><p>Accurate simulations.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Logistics</h5><p>Efficient routing.</p></div></div>
+</div>
+
+<div class="text-center mt-5">
+<button class="btn btn-outline-info btn-lg" onclick="showPage('future')">
+Next Page →
+</button>
+</div>
+</div>
+</section>
+
+<!-- FUTURE -->
+<section id="future" class="section">
+<div class="container">
+<h2 class="text-center text-info mb-5">Future & Challenges</h2>
+
+<div class="row g-4">
+<div class="col-md-6">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" class="future-img mb-3">
+<div class="card p-4">
+<h5>Future Scope</h5>
+<ul>
+<li>Quantum Internet</li>
+<li>Medical breakthroughs</li>
+<li>AI–Quantum integration</li>
+<li>Material discovery</li>
+<li>Scientific research acceleration</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6">
+<img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485" class="future-img mb-3">
+<div class="card p-4">
+<h5>Challenges</h5>
+<ul>
+<li>Decoherence</li>
+<li>Error correction</li>
+<li>High cost</li>
+<li>Scalability</li>
+<li>Lack of experts</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="text-center mt-5">
+<button class="btn btn-outline-info btn-lg" onclick="showPage('feedback')">
+Next Page →
+</button>
+</div>
+</div>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback" class="section">
+<div class="container text-center">
+<h2 class="text-info mb-4">Feedback</h2>
+
+<div class="card p-4 col-md-6 mx-auto">
+<form>
+<input class="form-control mb-3" placeholder="Your Name" required>
+<input type="email" class="form-control mb-3" placeholder="Your Email" required>
+<textarea class="form-control mb-3" placeholder="Your Feedback" required></textarea>
+<button class="btn btn-outline-info w-100">Submit</button>
+</form>
+</div>
+
+<button class="btn btn-outline-info btn-lg mt-4" onclick="showPage('home')">
+Back to Home →
+</button>
+</div>
+</section>
+
+<script>
+function showPage(id){
+document.querySelectorAll('.section').forEach(sec=>sec.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
